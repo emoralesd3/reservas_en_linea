@@ -1,0 +1,394 @@
+
+/*header{
+width: 100%;
+height: 63px;
+background:red ;
+color: #fff;
+
+position: absolute; 
+top: 0;
+left: 0;
+z-index: 10; 
+
+
+}
+
+*{
+
+  margin: 0px;
+  padding: 0px;
+}
+
+
+div#general{
+  margin: auto;
+  margin-top: 50px;
+width: 900px;
+height: 800px;
+background-color: red;
+
+
+}
+
+div#oferta{
+  margin-top: 20px;
+  float: right;
+  width: 200px;
+  height: 760px;
+  background-color:green;
+}
+
+div#novedades{
+  width: 640px;
+  height: 200px;
+  background-color: blue;
+}
+
+div#body{
+  margin-top: 20px;
+   width: 640px;
+   height: 580px;
+   background-color: purple;    
+   
+
+
+}
+
+div#body2{
+margin-top: 20px;
+width: 600px;
+height: 300
+}
+
+
+div#general2{
+   margin: auto;
+  
+width: 100px;
+height: 100px;
+background-color: black;
+
+
+}-->*/
+
+div#clima{
+  width:700px;
+  margin: 0 auto;
+}
+
+div#climainfo{
+width:700px;
+  margin: 0 auto;
+
+
+}
+
+/*ESTILOS GENERALES*/
+/*eL SELECTOR * nos permite seleccionar todos los elementos de nuestro archivo html*/
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; /*Para que los elementos no aumente su tamaño*/
+}
+
+body{
+  font-family: sans-serif; /**/
+}
+
+.contenedor{
+  width: 1200px;
+  margin: 0 auto; /*puedo escribir dos valors "0 0" el primero es para arriba-abajo y el segundo derecha-izquierda*/
+}
+
+/*HEADER*/
+
+.header .top-header{
+  padding: 6px 0;
+  font-size: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fafafa;
+  overflow: hidden;
+}
+/*top-menu*/
+.header .top-header .contenedor .top-menu{
+  float: left;
+}
+
+.header .top-header .contenedor .top-menu ul{
+  list-style: none;
+}
+
+.header .top-header .contenedor .top-menu ul li{
+  float: left;
+}
+
+.header .top-header .contenedor .top-menu ul li a{
+  text-decoration: none;
+  color: #363940;
+  padding: 10px 15px;
+  display: inline-block;
+}
+.header .top-header .contenedor .top-menu ul li a:hover{
+  color: #8b919c;
+}
+
+/*top-redes*/
+
+.header .top-header .contenedor .top-redes{
+  float: right;
+}
+
+.header .top-header .contenedor .top-redes ul{
+  list-style: none;
+}
+
+.header .top-header .contenedor .top-redes ul li{
+  float: right;
+}
+
+.header .top-header .contenedor .top-redes ul li a{
+  text-decoration: none;
+  color: #363940;
+  padding: 10px 15px;
+  display: inline-block;
+}
+.header .top-header .contenedor .top-redes ul li a:hover{
+  color: #8b919c;
+}
+
+.titulo-blog{
+  margin: 35px 0;
+  text-align: center;
+}
+
+.titulo-blog .contenedor h1 a{
+  text-decoration: none;
+  color: #363940;
+  font-size: 60px;
+  display: inline-block;
+  padding: 30px 0;
+  font-weight: 300;
+}
+
+.titulo-blog .contenedor h1 a:hover{
+  color: #8b919c;
+}
+
+.titulo-blog .contenedor .subtitulo{
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #c7c7c7;
+}
+
+.menu-principal{
+  margin-bottom: 40px;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.menu-principal .contenedor ul {
+  list-style: none;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.menu-principal .contenedor ul li{
+  display: inline-block;
+}
+.menu-principal .contenedor ul li a{
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #363940;
+}
+
+.menu-principal .contenedor ul li a:hover{
+  color: #8b919c;
+}
+
+/*MAIN*/
+/*BANNER*/
+.main .banner{
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.main .banner .contenedor .banner-principal{
+  width: 100%;
+}
+
+.main .banner .contenedor .banner-principal img{
+  width: 100%;
+}
+
+ /*blog*/
+
+
+
+
+.blog {
+  background: #f7f7f7;
+  padding: 40px 0;
+}
+/*Arregal el problema de los float y el contendor deja de tener altura o desaparece*/
+.blog .contenedor{
+  overflow: hidden;
+}
+
+ /*ARTICULOS BLOG*/
+
+ .blog .contenedor .iglesia-blog{
+   float: left;
+   width: 68%;
+ }
+
+ .blog .contenedor .iglesia-blog .reu{
+   background: #fff;
+   padding: 60px 0;
+   border: 1px solid #f0f0f0;
+   margin-bottom: 20px;
+ }
+
+.blog .contenedor .iglesia-blog .reu .fecha-iglesia{
+  color: #c7c7c7;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blog .contenedor .iglesia-blog .reu .titulo-iglesia{
+  color: #363940;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blog .contenedor .iglesia-blog .reu .categoria-iglesia{
+  color: #9c9c9c;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.blog .contenedor .iglesia-blog .reu img{
+  width: 100%;
+  margin-bottom: 20px;
+}
+.blog .contenedor .iglesia-blog .reu .texto-iglesia{
+  padding: 0 20px;
+  text-align: justify;
+}
+
+.blog .contenedor .iglesia-blog .reu .texto-iglesia p{
+  margin-bottom: 20px;
+  color: #363940;
+}
+
+.blog .contenedor .iglesia-blog .reu .boton{
+  text-align: center;
+}
+
+.blog .contenedor .iglesia-blog .reu .boton a{
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 20px;
+  background: none;
+  border: 1px solid #bababa;
+  font-size: 14px;
+  color: #7d7d7d;
+}
+
+.blog .contenedor .iglesia-blog .reu .boton a:hover{
+  background: #7d7d7d;
+  color: #fff;
+}
+
+/*ASIDE*/
+.aside{
+  float: right;
+  width: 28%;
+}
+
+.aside .widget{
+  background: #fff;
+  padding: 40px;
+  margin-bottom: 20px;
+  border: 1px solid #f0f0f0;
+}
+
+.aside .widget .autor-widget .foto-reu{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.aside .widget .autor-widget .foto-reu img{
+  width: 120px;
+  border-radius: 50%;
+}
+
+.aside .widget .autor-widget .datos{
+  text-align: center;
+}
+
+.aside .widget .autor-widget .datos .nombre{
+  color: #363940;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.aside .widget .autor-widget .datos .origen{
+  color: #9c9c9c;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.aside .widget .autor-widget .datos .info{
+  color: #363940;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.aside .widget .destacados-widget{
+  text-align: center;
+}
+
+.aside .widget .destacados-widget .titulo-destacados{
+  color:#363940;
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.aside .widget .destacados-widget ul{
+  list-style: none;
+  text-align: left;
+  border-top: 1px solid #f0f0f0;
+}
+
+.aside .widget .destacados-widget ul li a{
+  color: #363940;
+  font-size: 16px;
+  display: block;
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+  text-decoration: none;
+}
+
+.aside .widget .destacados-widget ul li a:hover{
+  text-decoration: underline;
+  color:#8b919c;
+}
+
+/*footer*/
+
+.footer{
+  background: #fff;
+  padding: 40px;
+  border: 1px solid #f0f0f0;
+  text-align: center;
+  color: #9c9c9c;
+}
