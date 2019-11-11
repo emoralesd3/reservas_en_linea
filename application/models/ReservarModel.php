@@ -29,5 +29,15 @@ class ReservarModel extends CI_Model
         );
         return $this->db->insert('reservacion', $data);
     }
+
+    public function obtenerReservaciones()
+    {
+        $sql = "SELECT r.*, th.descripcion tipo_ha 
+                FROM reservacion r
+                LEFT JOIN habitaciones h ON r.id_habitacion=h.id
+                LEFT JOIN tipo_habitacion th ON h.id_tipo_habitacion=th.id";
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
 }
 ?>
