@@ -39,8 +39,8 @@ class Success extends CI_Controller {
         $direccion = $this->input->post('direccion');
         $dia_hospedaje = $this->input->post('dia_hospedaje');
 
-        //$this->enviarMail();
-        $this->reportePDF();
+        $this->enviarMail();
+        //$this->reportePDF();
 
         //$datos = array($id_habitacion,$nombre,$apellido,$dpi,$email,$telefono,$direccion,$precio_habitacion,$dia_hospedaje);
         //$this->ReservarModel->guardarReservacion($datos);
