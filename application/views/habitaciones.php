@@ -58,7 +58,7 @@
                                             <?php echo 'Q.'.$value['precio_fin_semana'] ?>
                                         </p>
                                     </div>
-                                    <button class="btn btn-success">Reservar</button>
+                                    <a href="/index.php/reservar/<?php echo $value['id']?>" class="btn btn-success">Reservar</a>
                                 </div>
                             </div>
                             <br>

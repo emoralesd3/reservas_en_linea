@@ -12,6 +12,8 @@ class Reservar extends CI_Controller {
 
 	public function index()
 	{
-		
+		$id_habitacion = $this->uri->segment(2);
+		$data['habitacion'] = $this->ReservarModel->getHabitacion($id_habitacion);
+		$this->load->view('reservar', $data);
 	}
 }

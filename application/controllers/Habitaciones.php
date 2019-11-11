@@ -17,6 +17,6 @@ class Habitaciones extends CI_Controller {
 		$data['habitaciones_disponibles'] = $this->HabitacionesModel->habitaciones_disponibles($cantidad_personas,$cantidad_ninos);
 
 		//var_dump($data);
-		$this->load->view('reservas', $data);
+		$this->load->view('habitaciones', $data);
 	}
 }
