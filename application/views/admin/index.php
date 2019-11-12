@@ -1,135 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags --> 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>RL | LOGIN</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="/assets/css/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="/assets/css/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/assets/dist/css/AdminLTE.min.css">
 
-    <!-- Title -->
-    <title>Reservas en linea</title>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 
-    <!-- Favicon -->
-    <link rel="icon" href="/assets/img/core-img/favicon.ico">
-
-    <!-- Core Stylesheet -->
-    <link href="/assets/css/style.css" rel="stylesheet">
-
-    <!-- Responsive CSS -->
-    <link href="/assets/css/responsive/responsive.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/assets/css/estilos.css">
-    <link rel="stylesheet" href="/assets/css/font-awesome/css/font-awesbowebower_componentsr_componentsome.min.css">
-    <link rel="stylesheet" href="/assets/css/Ionicons/css/ionicons.min.css">
-    <link rel="stylesheet" href="/assets/js/datatables.net-bs/css/dataTables.bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css">
-
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-
-<body>
-
-    <div class="container">
-        <h1><a href="/index.php">Listado de reservaciones</a></h1>
-        <hr>
-        <h2>Las reservaciones que han realizado los usuarios en el sistema.</h2>
-        <hr>
-        <div class="row">
-            <div class="jumbotron">
-                <div class="table-responsive">
-                    <table class="table table-bordered table-hover" id="tbl_reservacion">
-                        <thead>
-                            <th>Nombre</th>
-                            <th>Apellido</th>
-                            <th>DPI</th>
-                            <th>Teléfono</th>
-                            <th>Dirección</th>
-                            <th>Email</th>
-                            <th>Tipo habitación</th>
-                            <th>Precio</th>
-                        </thead>
-                        <tbody>
-                            <?php 
-                            foreach ($reservaciones as $key => $value) {
-                            
-                            ?>
-                            <tr>
-                                <td><?php echo $value['nombre']; ?></td>
-                                <td><?php echo $value['apellido']; ?></td>
-                                <td><?php echo $value['dpi']; ?></td>
-                                <td><?php echo $value['telefono']; ?></td>
-                                <td><?php echo $value['direccion']; ?></td>
-                                <td><?php echo $value['email']; ?></td>
-                                <td><?php echo $value['tipo_ha']; ?></td>
-                                <td><?php echo $value['precio']; ?></td>
-                            </tr>
-                            <?php 
-                            }
-                            ?>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <a href="/"><b>R</b>L</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+    <p class="login-box-msg">INICIO DE SESIÓN</p>
+    <div id="msg"><?php echo (isset($mensaje)) ? "<div class='alert alert-warning'>".$mensaje."</div>" : "" ?></div>
+    <form action="/index.php/admin/login" method="post">
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" name='usuario' id="user" placeholder="Usuario">
+        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" name="password" id="pass" placeholder="Contraseña">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button type="submit" id="btn_login" class="btn btn-primary btn-block btn-flat">ENTRAR</button>
         </div>
-    </div>
+        <!-- /.col -->
+      </div>
+    </form>
 
-    <!-- Jquery-2.2.4 js -->
-    <script src="/assets/js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="/assets/js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap-4 js -->
-    <script src="/assets/js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
-    <script src="/assets/js/others/plugins.js"></script>
-    <!-- Active JS -->
-    <script src="/assets/js/active.js"></script>
+  </div>
+  <!-- /.login-box-body -->
+</div>
+<!-- /.login-box -->
 
-    <script src="/assets/js/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="/assets/js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- jQuery 3 -->
+<script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- iCheck -->
+<script src="/assets/plugins/iCheck/icheck.min.js"></script>
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass: 'iradio_square-blue',
+      increaseArea: '20%' /* optional */
+    });
+  });
 
-    <script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.colVis.min.js"></script>
-
-    <script>
-        
-        $(document).ready(function(){
-
-            $('#tbl_reservacion').DataTable({
-                "language": {
-                    "lengthMenu": "Mostrar _MENU_ registros por página",
-                    "zeroRecords": "Información no encontrada",
-                    "info": "Mostrando página _PAGE_ de _PAGES_",
-                    "infoEmpty": "No hay registros disponibles",
-                    "infoFiltered": "(Filtrado de _MAX_ total entradas)",
-                    "search": "Buscar",
-                    "processing": "Procesando...",
-                    "loadingRecords": "Cargando...",
-                    "paginate": {
-                    "first": "Primero",
-                    "last": "Ultimo",
-                    "next": "Siguiente",
-                    "previous": "Anterior"
-                    },
-                    "buttons": {
-                    "colvis": "Mostrar columnas",
-                    "print": "Imprimir"
-                    }
-                },
-                "dom": 'Bfrtip',
-                "buttons": [
-                "colvis", "excel", "csv","pdf"
-                ]
-            });
-
-
-            
-        })
-
-    </script>
+  $(document).ready(function()
+  {
+    $('#btn_entrar').on("click", function(e){
+      e.preventDefault();
+      let data = {
+        usuario: $("#user").val(),
+        password: $("#pass").val()
+      };
+      
+      
+      $.ajax({
+        url: "/reportes/index.php/auth/login",
+        data: data,
+        method: "POST",
+        dataType: 'json',
+        success: function(resp){
+          $("#msg").html("<div><p>Credenciales correctas</p></div>");
+        },
+        error: function(error){
+          $("#msg").html("<div><p>Credenciales correctas</p></div>");
+        }
+      })
+      
+    })
+  })
+</script>
 </body>
+</html>

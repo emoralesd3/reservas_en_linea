@@ -39,13 +39,29 @@ class Success extends CI_Controller {
         $direccion = $this->input->post('direccion');
         $dia_hospedaje = $this->input->post('dia_hospedaje');
 
-        $this->enviarMail();
+        //$this->enviarMailTest();
         //$this->reportePDF();
 
-        //$datos = array($id_habitacion,$nombre,$apellido,$dpi,$email,$telefono,$direccion,$precio_habitacion,$dia_hospedaje);
-        //$this->ReservarModel->guardarReservacion($datos);
+        $datos = array($id_habitacion,$nombre,$apellido,$dpi,$email,$telefono,$direccion,$precio_habitacion,$dia_hospedaje);
+        $this->ReservarModel->guardarReservacion($datos);
         
-		//$this->load->view('success');
+		$this->load->view('success');
+    }
+
+    public function enviarMailTest()
+    {
+        $this->load->library('email');
+        $configuraciones['mailtype'] = 'html';
+        $this->email->initialize($configuraciones);
+        $this->email->from('empleo@mintrabajo.gob.gt');
+        $this->email->to('elvinmorales48@gmail.com');
+        $this->email->subject("Prueba de mail con smtp");
+        $this->email->message("esto es una prueba de envio de correos por smtp");
+        if($this->email->send()){
+            echo "enviado";
+        }else{
+            echo $this->email->print_debugger(array('headers'));
+        }
     }
 
     public function reportePDF()
