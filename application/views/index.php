@@ -153,7 +153,7 @@ Ubicado en la periferia de la cabecera municipal de San Felipe, Retalhuleu. A 61
                         <h2>eventos</h2>
                     </div>
                     <!-- btn -->
-                    <a href="eventos.html" class="btn caviar-btn"><span></span>ver eventos </a>
+                    <a href="#" class="btn caviar-btn" data-toggle="modal" data-target="#myModal"><span></span>ver eventos </a>
                 </div>
 
 
@@ -243,6 +243,51 @@ Ubicado en la periferia de la cabecera municipal de San Felipe, Retalhuleu. A 61
      <br><br><br><br>
 
     <!-- ****** fin el area de reservacion ****** -->
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-lg-4">
+                            <h2>Eventos Sociales</h2>
+                            <hr>
+                            <div class="panel">
+                                <small>Desde la cena de compromiso, la Fiesta de XV años hasta la Boda de tus sueños; siempre, nuestra" social evento planner" junto con nuestro equipo de banquetes te darán toda la asesoría y el soporte para hacer de tu evento una experiencia memorable. Te fascinarás con nuestros espectaculares montajes así como el exquisito y variado menú. La flexibilidad de nuestros salones nos permiten atender eventos desde 50 hasta 800 personas . También ofrecemos servicio a domicilio al lugar de tu preferencia.</small>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <h2>Paquete de bodas</h2>
+                            <hr>
+                            <div class="panel">
+                                <small>
+                                    Salón en Hotel o Catering
+                                    Servicio de Pastel
+                                    Descorche de Champagne
+                                    Mobiliario o Equipo
+                                    Centros de Mesa seleccionados
+                                    Precio especial en descorche personalizado
+                                    4 parqueos de cortesía y tarifa especial para invitados
+                                    Día de SPA para los novios (Incluye desayuno Buffet)
+                                    Paquete aplica a partir de las 100 personas
+                                    Prueba de menú para 4 personas
+
+                                    * Al confirmar tu evento te obsequiamos;  Té de despedida de soltera o boda civil para 10 personas con cena servida.
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <h2>Eventos y seminarios</h2>
+                            <hr>
+                            <small>
+                                Nuestras cinco salas para eventos ofrecen la versatilidad para acomodar una variedad de eventos, y nuestro equipo en el sitio se asegurará de que sus refacciones por la mañana y por la tarde y los arreglos audiovisuales se ajusten para satisfacer sus necesidades. Desde auditorio y montaje de salas de clase hasta arreglos imperiales y de tipo U. Tenemos el lugar ideal para reuniones de juntas para cinco invitados, seminarios de capacitación para 25 o conferencias de ventas de hasta 150.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
     <!-- ****** Footer Area Start ****** -->
     <footer class="caviar-footer-area">

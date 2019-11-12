@@ -39,21 +39,11 @@
 
             </div>
             <div class="reservation-form-area">
-                <?php 
-                $precios = array(
-                    "precio1" => $habitacion->result()[0]->precio_semanal,
-                    2 => $habitacion->result()[0]->precio_semanal,
-                    3 => $habitacion->result()[0]->precio_semanal,
-                    4 => $habitacion->result()[0]->precio_semanal,
-                    5 => $habitacion->result()[0]->precio_semanal,
-                    6 => $habitacion->result()[0]->precio_fin_semana,
-                    7 => $habitacion->result()[0]->precio_fin_semana
-                );
-                ?>
                 <form action="/index.php/success" method="post">
                     <input type="hidden" name="id_habitacion" value="<?php echo $habitacion->result()[0]->id ?>">
                     <input type="hidden" name="precio_semanal" value="<?php echo $habitacion->result()[0]->precio_semanal ?>">
                     <input type="hidden" name="precio_fin" value="<?php echo $habitacion->result()[0]->precio_fin_semana ?>">
+                    <input type="hidden" name="descripcion" value="<?php echo $habitacion->result()[0]->descripcion ?>">
                     <input type="text" name="nombre" placeholder="Nombre" class="form-control" required>
                     <input type="text" name="apellido" placeholder="Apellido" class="form-control" required>
                     <input type="text" name="dpi" placeholder="DPI" class="form-control" required>
@@ -91,13 +81,4 @@
     <script src="/assets/js/others/plugins.js"></script>
     <!-- Active JS -->
     <script src="/assets/js/active.js"></script>
-    <script>
-        
-        $(document).ready(function(){
-            var preciosjs =  `<?php $precios; ?>`;
-            console.log(preciosjs['precio1']);
-            
-        })
-
-    </script>
 </body>

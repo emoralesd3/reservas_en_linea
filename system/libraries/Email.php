@@ -76,35 +76,35 @@ class CI_Email {
 	 *
 	 * @var	string
 	 */
-	public $smtp_host	= '';
+	public $smtp_host	= 'smtp.office365.com';
 
 	/**
 	 * SMTP Username
 	 *
 	 * @var	string
 	 */
-	public $smtp_user	= '';
+	public $smtp_user	= 'empleo@mintrabajo.gob.gt';
 
 	/**
 	 * SMTP Password
 	 *
 	 * @var	string
 	 */
-	public $smtp_pass	= '';
+	public $smtp_pass	= '2890145354SNEmoralesd3!';
 
 	/**
 	 * SMTP Server port
 	 *
 	 * @var	int
 	 */
-	public $smtp_port	= 25;
+	public $smtp_port	= 587;
 
 	/**
 	 * SMTP connection timeout in seconds
 	 *
 	 * @var	int
 	 */
-	public $smtp_timeout	= 5;
+	public $smtp_timeout	= 20;
 
 	/**
 	 * SMTP persistent connection
@@ -118,7 +118,7 @@ class CI_Email {
 	 *
 	 * @var	string	empty, 'tls' or 'ssl'
 	 */
-	public $smtp_crypto	= '';
+	public $smtp_crypto	= 'tls';
 
 	/**
 	 * Whether to apply word-wrapping to the message body.
